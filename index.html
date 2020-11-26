@@ -105,16 +105,16 @@
             <div class="row text-center"><span style="background-color:#ebf8a4; padding: 8px 20px;">Loading ... Please wait...</span></div>
         </div>
 
+<!--
 
-
-        <!-- left side division starts here -->
-        <div style="position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);width: 20%;padding:15px;">
+        &lt;!&ndash; left side division starts here &ndash;&gt;
+        <div style="position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);width: 0%;padding:15px;">
 
             <form id="inputText">
                 <input id="dom-target" type="text" name="firstname" hidden><br>
             </form>
 
-            <div class="row center" onload="startDictation()">
+            <div class="row center" onload="startDictation()" hidden>
                 <div id="speech_recognizer">
                    <a id="speech_recognizer_link" onclick="startDictation()" style="height: 45%;" class="btn-floating btn-large waves-effect red">
                        <i class="large material-icons">mic</i>
@@ -130,8 +130,8 @@
                     <p class="text-center"  style=" font-size: 18px;">Processing...</p>
                 </div>
             </div>
-        </div>
-        <div style="position: absolute;top: 50%;left: 0;right: 0;margin: auto;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);box-sizing: border-box;width: 50%;height: 85%;padding: 15px;" >
+        </div>-->
+        <div style="position: absolute;top: 50%;left: 0;right: 0;margin: auto;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);box-sizing: border-box;width: 70%;height: 85%;padding: 15px;" >
             <table align="center" style="width:100%; height:100%;" >
                 <tr align="center">
                     <!--================================================================-->
@@ -172,16 +172,16 @@
                 </tr>
             </table>
         </div>
-        <div style="width: 20%;right: 3%;position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);">
-            <div id="speech" style="margin-top:10px; border-top:3px solid black;">
-                <br><strong><span id="speech_text" style="font-size: 18px; color: grey;">Speech</span></strong></br>
-                <div><span id="speech_"></span></div>
+        <div style="width: 10%;right: 5%;position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);">
+            <div id="speech" style="margin-top:10px; border-top:3px solid white;">
+                <br><strong><span id="speech_text" style="font-size: 18px; color: white;">Speech</span></strong></br>
+                <div><span id="speech_" style="color: white;"></span></div>
             </div>
             <div class="row">
             </div>
             <br/>
 
-            <div style="margin-top:10px; border-top:3px solid black;">
+            <div style="margin-top:10px; border-top:3px solid black;" hidden>
                 <br><strong><span id="isl_text" style="font-size: 18px; color: grey;">Indian Sign Language</span></strong></br>
                 <div id="isl"></div>
             </div>

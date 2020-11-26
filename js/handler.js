@@ -19,6 +19,7 @@
             $("#loading").hide();
             clearInterval(loadingTout);
             console.log("Avatar loaded successfully !");
+            startDictation();
         }
     }, 1000);
 
@@ -62,7 +63,7 @@
         // console.log("$$ 4");
 
         document.getElementById('isl').innerHTML = final_response['isl_text_string'];
-        document.getElementById('speech_').innerHTML = speech;
+        /*document.getElementById('speech_').innerHTML = speech;*/
         return final_response['pre_process_string'];
     }
     activateTab("menu1-h", "menu1"); // activate first menu by default
@@ -72,11 +73,11 @@
         $('#speech_recognizer').hide();
         $("#speech_loader").show();
         console.log('Speech recognition started...');
-        /* setTimeout(function() {
-        let parsedSpeech = getParsedText("Good morning Today is Tuesday. How are you.");
+        let speech = "good morning Neelu. howareyou. I want to understand time need on work on sign languages. thankyou Priyanshu";
+        let parsedSpeech = speech;
+        document.getElementById('speech_').innerHTML = speech;
         clickme(parsedSpeech);
-        }, 8000);*/
-        if (window.hasOwnProperty('webkitSpeechRecognition')) {
+        /*if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
             let recognition = new webkitSpeechRecognition();
 
@@ -110,7 +111,7 @@
             recognition.onerror = function(e) {
                 recognition.stop();
             }
-        }
+        }*/
     }
 
     var recognition = new webkitSpeechRecognition();
@@ -276,7 +277,7 @@
                     i++;
                 }
             }
-        }, 1000);
+        }, 500);
 
 
     }
